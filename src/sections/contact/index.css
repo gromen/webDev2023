@@ -8,21 +8,9 @@
     justify-content: space-between;
   }
 
-  & .btn {
-    max-width: 20rem;
-    background-color: white;
-    border-radius: 6px;
-    text-align: center;
-    color: #ed4c5c;
-    padding: 1.7rem 5.2rem;
-    text-decoration: none;
-    font-size: 1.4rem;
-  }
-
   & .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
     max-width: 44.4rem;
   }
@@ -35,8 +23,8 @@
     display: flex;
     gap: 30px;
 
-    & > input {
-      margin-bottom: 0;
+    & > .formInput {
+      margin: 0;
     }
   }
 

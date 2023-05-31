@@ -1,6 +1,7 @@
 import { useReducer } from 'react';
 import FormInput from '../formInput';
 import { formReducer, initialState } from '../../reducers/formReducer';
+import Button from '../button';
 
 const ContactForm = () => {
   const [state, dispatch] = useReducer(formReducer, initialState);
@@ -55,9 +56,9 @@ const ContactForm = () => {
         placeholder='What service are you interested in?'
         value={state.message}
       />
-      <button className='btn' type='submit'>
+      <Button variant='secondary' type='submit'>
         Submit Now
-      </button>
+      </Button>
     </form>
   );
 };
