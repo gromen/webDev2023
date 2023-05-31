@@ -1,0 +1,36 @@
+.btn {
+  min-width: 16rem;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  border: 0;
+  white-space: nowrap;
+
+  &--primary {
+    background-color: white;
+    border-color: white;
+    color: #ed4c5c;
+  }
+
+  &--secondary {
+    background-color: #ed4c5c;
+    border-color: #ed4c5c;
+    color: white;
+  }
+
+  &--fullWidth {
+    width: 100%;
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

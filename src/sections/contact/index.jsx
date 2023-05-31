@@ -9,7 +9,7 @@ const Contact = () => {
       <div className='container'>
         <div className='content'>
           <Heading level={2}>Contact</Heading>
-          <Text>
+          <Text size='14px'>
             Questions or concerns? Just fill out the form below and our support team will get back
             to you within 24 hours
           </Text>
