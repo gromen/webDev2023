@@ -1,57 +1,59 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 import FormInput from '../formInput';
+import { formReducer, initialState } from '../../reducers/formReducer';
 
 const ContactForm = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [message, setMessage] = useState('');
+  const [state, dispatch] = useReducer(formReducer, initialState);
 
+  const onChange = (event) => {
+    const { name, value } = event.target;
+    dispatch({ type: `SET_${name.toUpperCase()}`, payload: value });
+  };
   const onSubmitForm = (event) => {
     event.preventDefault();
-    console.log({ firstName, lastName, phone, message });
+    console.log(state);
   };
 
   return (
     <form onSubmit={onSubmitForm} className='contact-form'>
       <div className='input-group'>
         <FormInput
-          onChange={(event) => setFirstName(event.target.value)}
+          onChange={onChange}
           type='text'
           id='firstName'
           name='firstName'
           placeholder='First name'
-          value={firstName}
+          value={state.firstName}
           required={true}
         />
         <FormInput
-          onChange={(event) => setLastName(event.target.value)}
+          onChange={onChange}
           type='text'
           id='lastName'
           name='lastName'
           placeholder='Last name'
-          value={lastName}
+          value={state.lastName}
           required={true}
         />
       </div>
       <FormInput
-        onChange={(event) => setPhone(event.target.value)}
+        onChange={onChange}
         style='full'
         type='tel'
         id='phone'
         name='phone'
         placeholder='Phone Number'
-        value={phone}
+        value={state.phone}
         required={true}
       />
       <FormInput
-        onChange={(event) => setMessage(event.target.value)}
+        onChange={onChange}
         style='full'
         type='text'
-        id='text'
-        name='text'
+        id='message'
+        name='message'
         placeholder='What service are you interested in?'
-        value={message}
+        value={state.message}
       />
       <button className='btn' type='submit'>
         Submit Now
