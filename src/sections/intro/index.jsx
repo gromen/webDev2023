@@ -2,7 +2,6 @@ import './index.css';
 import Heading from '../../components/heading';
 import Text from '../../components/text';
 import Button from '../../components/button';
-import Button from '../../components/button';
 
 const Intro = () => {
   return (
