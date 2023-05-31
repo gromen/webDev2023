@@ -1,6 +1,6 @@
-import Heading from '../heading/index';
-import Text from '../text/index';
-import './index.css'
+import Heading from '../heading';
+import Text from '../text';
+import './index.css';
 
 /**
  * A small container with an icon, heading, and short paragraph of text.
@@ -10,9 +10,8 @@ import './index.css'
  * @returns {JSX.Element} - The rendered Feature component.
  */
 const Feature = ({ img, heading, text }) => {
-
   return (
-    <div className="feature">
+    <div className='feature'>
       <img src={img} alt={heading} />
       <Heading level={3}>{heading}</Heading>
       <Text>{text}</Text>
