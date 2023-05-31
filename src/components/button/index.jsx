@@ -4,12 +4,12 @@ const Button = ({
   type = 'button',
   onClick,
   disabled = false,
-  variant = 'primary',
+  variant,
   linkUrl = '#',
   linkText,
+  linkClasses,
   children,
   fullWidth,
-  className,
 }) => {
   const buttonStyle = variant === 'primary' ? 'primary' : 'secondary';
 
@@ -23,7 +23,7 @@ const Button = ({
       {children}
     </button>
   ) : (
-    <a className={className} href={linkUrl}>
+    <a className={linkClasses} href={linkUrl}>
       {linkText}
     </a>
   );

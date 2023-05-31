@@ -57,7 +57,7 @@ const ContactForm = () => {
         value={state.message}
       />
       <Button variant='secondary' type='submit'>
-        Submit Now
+        SUBMIT NOW
       </Button>
     </form>
   );

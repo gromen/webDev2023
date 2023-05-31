@@ -2,6 +2,7 @@ import './index.css';
 import Heading from '../../components/heading';
 import Text from '../../components/text';
 import Button from '../../components/button';
+import Button from '../../components/button';
 
 const Intro = () => {
   return (
@@ -14,7 +15,7 @@ const Intro = () => {
           Cloud budget management for everyone. Only €69.95 a Month After a 7 Day Trial of <br />
           Up to €4.99
         </Text>
-        <Button className='btn btn--primary' linkText='Sign up' variant='primary' />
+        <Button linkText='SIGN UP' linkClasses='btn btn--primary' />
       </div>
     </div>
   );
