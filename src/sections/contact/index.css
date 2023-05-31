@@ -34,6 +34,13 @@
   & .input-group {
     display: flex;
     gap: 30px;
-    margin-bottom: 0;
+
+    & > input {
+      margin-bottom: 0;
+    }
+  }
+
+  & ::placeholder {
+    color: rgba(19, 39, 67, 0.5);
   }
 }
