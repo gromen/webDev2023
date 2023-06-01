@@ -14,7 +14,7 @@ const Intro = () => {
           Cloud budget management for everyone. Only €69.95 a Month After a 7 Day Trial of <br />
           Up to €4.99
         </Text>
-        <Button linkText='SIGN UP' linkClasses='btn btn--primary' />
+        <Button linkUrl='#' linkText='SIGN UP' variant='primary' />
       </div>
     </div>
   );

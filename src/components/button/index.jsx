@@ -1,31 +1,19 @@
 import './index.scss';
 
-const Button = ({
-  type = 'button',
-  onClick,
-  disabled = false,
-  variant,
-  linkUrl = '#',
-  linkText,
-  linkClasses,
-  children,
-  fullWidth,
-}) => {
-  const buttonStyle = variant === 'primary' ? 'primary' : 'secondary';
+const Button = ({ type, onClick, disabled = false, variant, linkUrl, linkText, children }) => {
+  const ButtonTag = linkText ? 'a' : 'button';
 
-  return !linkText ? (
-    <button
-      className={`btn btn--${buttonStyle}${fullWidth ? ' btn--fullWidth' : ''}`}
+  return (
+    <ButtonTag
+      href={linkUrl}
+      className={variant ? `btn btn--${variant}` : ''}
       type={type}
       onClick={onClick}
       disabled={disabled}
     >
-      {children}
-    </button>
-  ) : (
-    <a className={linkClasses} href={linkUrl}>
       {linkText}
-    </a>
+      {children}
+    </ButtonTag>
   );
 };
 
